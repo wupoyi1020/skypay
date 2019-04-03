@@ -1,0 +1,11 @@
+apiVersion: v1
+kind: Service
+metadata:
+  name: gateway-cluster-ip-service
+spec:
+  type: ClusterIP
+  selector:
+    app: geteway
+  ports:
+    - port: 8080
+      targetPort: 8080
